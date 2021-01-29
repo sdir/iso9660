@@ -101,7 +101,7 @@ func (f *File) Name() string {
 	splitFileIdentifier := strings.Split(fileIdentifier, ".")
 
 	// extension is empty, return just the name without a dot
-	if len(splitFileIdentifier[1]) == 0 {
+	if len(splitFileIdentifier) == 0 {
 		return splitFileIdentifier[0]
 	}
 
@@ -116,7 +116,7 @@ func (f *File) Size() int64 {
 
 // Sys returns nil
 func (f *File) Sys() interface{} {
-	return nil
+	return f.Reader()
 }
 
 // GetChildren returns the chilren entries in case of a directory
