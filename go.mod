@@ -1,4 +1,4 @@
-module github.com/kdomanski/iso9660
+module github.com/sdir/iso9660
 
 go 1.14
 
